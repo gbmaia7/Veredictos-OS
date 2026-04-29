@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #080C0B;
+  --bg-surface: #0F1512;
+  --bg-card: #141A19;
+  --border: #1E2A28;
+  --border-subtle: #162220;
+  --teal: #00E5C3;
+  --teal-dim: #00C4AA;
+  --teal-muted: #00857A;
+  --teal-glow: rgba(0, 229, 195, 0.08);
+  --text-primary: #E8EEEE;
+  --text-secondary: #7A9A98;
+  --text-muted: #4A6A68;
+  --red: #EF4444;
+  --amber: #F59E0B;
+  --green: #10B981;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #080C0B;
+  color: #E8EEEE;
+  font-family: 'DM Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #080C0B;
+}
+::-webkit-scrollbar-thumb {
+  background: #1E2A28;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00857A;
+}
+
+/* TipTap editor styles */
+.tiptap {
+  outline: none;
+  min-height: 400px;
+  color: #E8EEEE;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.tiptap p.is-editor-empty:first-child::before {
+  color: #4A6A68;
+  content: attr(data-placeholder);
+  float: left;
+  height: 0;
+  pointer-events: none;
+}
+
+.tiptap h1 { font-family: 'Bebas Neue', sans-serif; font-size: 2.5rem; color: #E8EEEE; margin: 1.5rem 0 0.75rem; }
+.tiptap h2 { font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; color: #E8EEEE; margin: 1.25rem 0 0.5rem; }
+.tiptap h3 { font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 1.2rem; color: #E8EEEE; margin: 1rem 0 0.5rem; }
+.tiptap strong { color: #E8EEEE; font-weight: 700; }
+.tiptap em { color: #7A9A98; }
+.tiptap code { background: #141A19; border: 1px solid #1E2A28; border-radius: 4px; padding: 2px 6px; font-family: 'DM Mono', monospace; font-size: 13px; color: #00E5C3; }
+.tiptap pre { background: #141A19; border: 1px solid #1E2A28; border-radius: 8px; padding: 16px; overflow-x: auto; }
+.tiptap pre code { background: none; border: none; padding: 0; color: #E8EEEE; }
+.tiptap ul, .tiptap ol { padding-left: 1.5rem; }
+.tiptap li { margin: 0.25rem 0; }
+.tiptap blockquote { border-left: 3px solid #00E5C3; padding-left: 1rem; color: #7A9A98; margin: 1rem 0; }
+.tiptap hr { border: none; border-top: 1px solid #1E2A28; margin: 1.5rem 0; }
+.tiptap a { color: #00E5C3; text-decoration: underline; }
+
+.tiptap table { border-collapse: collapse; width: 100%; }
+.tiptap th { background: #141A19; border: 1px solid #1E2A28; padding: 8px 12px; text-align: left; font-weight: 600; color: #7A9A98; }
+.tiptap td { border: 1px solid #1E2A28; padding: 8px 12px; }
+
+/* Drag and drop styles */
+.drag-over { background: rgba(0, 229, 195, 0.04) !important; border-color: rgba(0, 229, 195, 0.3) !important; }
